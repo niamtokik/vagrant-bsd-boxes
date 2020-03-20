@@ -1,18 +1,18 @@
 { 
   "variables": {
     "os_type": "FreeBSD_64",
-    "repository": "ci-01.nyi.hardenedbsd.org",
-    "release": "12-stable",
+    "repository": "mirrors.dotsrc.org",
+    "release": "20.1",
     "arch": "amd64",
-    "checksum": "0f630b5a8c2f38ea9171f09a75a25b839875285907fcc8289ffafa26f8a97653ddcb271ed4f519a4b37ea61383658fd2e175178b718286390a5b82f37ba91357",
-    "checksum_type": "sha512",
+    "checksum": "4b15e9b3d72732d325c5eaf46ba34575d4de8cdc3e3ac1b10666c7372563be6d",
+    "checksum_type": "sha256",
     "root_password": "vagrant",
     "user_password": "vagrant"
   },
   "builders": [{
     "type": "virtualbox-iso",
     "guest_os_type": "{{user `os_type`}}",
-    "iso_url": "https://{{user `repository`}}/pub/hardenedbsd/{{user `release`}}/{{user `arch`}}/{{user `arch`}}/BUILD-LATEST/bootonly.iso",
+    "iso_url": "https://{{user `repository`}}/opnsense/releases/mirror/OPNsense-{{user `release`}}-OpenSSL-dvd-{{user `arch`}}.iso.bz2",
     "iso_checksum": "{{user `checksum`}}",
     "iso_checksum_type": "{{user `checksum_type`}}",
     "ssh_username": "vagrant",
@@ -21,6 +21,6 @@
     "boot_command": [
     ]}
   ],
-  "provisioners": [ ],
+  "provisioners": [],
   "post-processors": ["vagrant"]
 }

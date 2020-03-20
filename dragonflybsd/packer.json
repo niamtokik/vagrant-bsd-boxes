@@ -1,0 +1,26 @@
+{ 
+  "variables": {
+    "os_type": "FreeBSD_64",
+    "repository": "mirror-master.dragonflybsd.org",
+    "release": "5.8.0",
+    "arch": "x86_64",
+    "checksum": "4c14c4e7395c6b85f95f7dc86ad9455a",
+    "checksum_type": "md5",
+    "root_password": "vagrant",
+    "user_password": "vagrant"
+  },
+  "builders": [{
+    "type": "virtualbox-iso",
+    "guest_os_type": "{{user `os_type`}}",
+    "iso_url": "https://{{user `repository`}}/iso-images/dfly-{{user `arch`}}-{{user `release`}}_REL.iso",
+    "iso_checksum": "{{user `checksum`}}",
+    "iso_checksum_type": "{{user `checksum_type`}}",
+    "ssh_username": "vagrant",
+    "ssh_password": "{{user `user_password`}}",
+    "boot_wait": "40s",
+    "boot_command": [
+    ]}
+  ],
+  "provisioners": [ ],
+  "post-processors": ["vagrant"]
+}

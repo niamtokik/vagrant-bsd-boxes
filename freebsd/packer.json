@@ -1,0 +1,26 @@
+{ 
+  "variables": {
+    "os_type": "FreeBSD_64",
+    "repository": "ftp.fr.freebsd.org",
+    "release": "12.1",
+    "arch": "amd64",
+    "checksum": "6c355def68b3c0427f21598cb054ffc893568902f205601ac60f192854769b31bc9cff8eeb6ce99ef975a8fb887d8d3e56fc6cd5ea5cb4b3bba1175c520047cb",
+    "checksum_type": "sha512",
+    "root_password": "vagrant",
+    "user_password": "vagrant"
+  },
+  "builders": [{
+    "type": "virtualbox-iso",
+    "guest_os_type": "{{user `os_type`}}",
+    "iso_url": "https://{{user `repository`}}/pub/FreeBSD/releases/ISO-IMAGES/{{user `release`}}/FreeBSD-{{user `release`}}-RELEASE-{{user `arch`}}-bootonly.iso",
+    "iso_checksum": "{{user `checksum`}}",
+    "iso_checksum_type": "{{user `checksum_type`}}",
+    "ssh_username": "vagrant",
+    "ssh_password": "{{user `user_password`}}",
+    "boot_wait": "40s",
+    "boot_command": [
+    ]}
+  ],
+  "provisioners": [ ],
+  "post-processors": ["vagrant"]
+}
