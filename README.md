@@ -107,6 +107,10 @@ find custom providers on github.
 You can add one image directly in your `Vagrantfile` or take a look on
 my [profile](https://app.vagrantup.com/niamtokik).
 
+## Can I provision my own VM?
+
+Yes (manually)... And no (automatically) at this time. 
+
 ## How to integrate in CI/CD?
 
 NOTE: Work in progress
