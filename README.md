@@ -26,39 +26,61 @@ gmake openbsd
 
 # Support
 
-## OpenBSD
+Only amd64 (or x86_64) are supported at the moment.
 
- * classical install
- * fde install
+## [OpenBSD](https://www.openbsd.org/)
 
-## FreeBSD
+ * full install
+   * https://app.vagrantup.com/niamtokik/boxes/openbsd-current
+   * https://app.vagrantup.com/niamtokik/boxes/openbsd-6.6
+   
+ * fde + full install
+   * wip
+
+## [FreeBSD](https://www.freebsd.org/)
 
  * full install (ufs)
- * fde install (ufs)
+ * fde + full install (ufs)
 
-## NetBSD
+## [NetBSD](https://www.netbsd.org/)
 
  * full install
+   * https://app.vagrantup.com/niamtokik/boxes/netbsd-9
  * no x11 install
+   * https://app.vagrantup.com/niamtokik/boxes/netbsd-9-nox11
  * minimal install
+   * https://app.vagrantup.com/niamtokik/boxes/netbsd-9-minimal
 
-## DragonFlyBSD
-
- * full install
-
-## HardenedBSD
+## [DragonFlyBSD](https://www.dragonflybsd.org)
 
  * full install
+   * https://app.vagrantup.com/niamtokik/boxes/dragonflybsd
+
+## [HardenedBSD](https://hardenedbsd.org/)
+
+ * full install
+   * https://app.vagrantup.com/niamtokik/boxes/hardenedbsd-12
  * fde install
+   * wip
 
-## OPNSense
+## [OPNSense](https://opnsense.org/)
 
  * full install
+   * wip
+
+## [BSDRP](https://bsdrp.net/)
+
+ * full install
+   * wip
 
 # FAQ
 
-## What I need?
+## What is the requirement?
 
+ * operating system supporting one of the previous listed providers:
+   * Windows 10 (hyper-v)
+   * Linux/BSD (virtualbox, qemu/kvm, xen)
+   * MacOS (virtualbox)
  * packer
  * vagrant
 
@@ -85,3 +107,22 @@ find custom providers on github.
 You can add one image directly in your `Vagrantfile` or take a look on
 my [profile](https://app.vagrantup.com/niamtokik).
 
+## How to integrate in CI/CD?
+
+NOTE: Work in progress
+
+### Jenkins
+
+wip
+
+### Buildbot
+
+wip
+
+### Travis-CI
+
+wip
+
+### Gitlab CICD
+
+wip
