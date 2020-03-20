@@ -1,0 +1,51 @@
+{ "builders": [
+        {
+                "type": "virtualbox-iso",
+                "guest_os_type": "OpenBSD_64",
+                "iso_url": "https://ftp.eu.openbsd.org/pub/OpenBSD/snapshots/amd64/install66.iso",
+                "iso_checksum": "324d5f98c4d104fac1d02bb82b13025c4cb8c667a8f238844e811202520d6eac",
+                "iso_checksum_type": "sha256",
+                "ssh_username": "vagrant",
+                "ssh_password": "vagrant",
+    "boot_wait": "40s",
+                "boot_command": [
+   "I<enter><wait>",
+   "<enter><wait>",
+   "openbsd.vagrant<enter><wait>",
+   "<enter><wait>",
+   "dhcp<enter><wait10>",
+   "none<enter><wait>",
+   "done<enter><wait>",
+   "vagrant<enter><wait>",
+   "vagrant<enter><wait>",
+   "vagrant<enter><wait>",
+   "yes<enter><wait>",
+   "no<enter><wait>",
+   "vagrant<enter><wait>",
+   "vagrant<enter><wait>",
+   "vagrant<enter><wait>",
+   "vagrant<enter><wait>",
+   "no<enter><wait>",
+   "UTC<enter><wait>",
+   "wd0<enter><wait>",
+   "whole<enter><wait>",
+   "a<enter><wait1m>",
+   "http<enter><wait>",
+   "none<enter><wait>",
+   "ftp.eu.openbsd.org<enter><wait5>",
+   "pub/OpenBSD/snapshots/amd64<enter><wait5>",
+   "done<enter><wait6m>",
+   "done<enter><wait>",
+   "yes<enter><wait>",
+   "<wait2m>",
+   "reboot<enter><wait>",
+   "<wait5m>"
+  ]
+        }],
+ "provisioners": [
+  { "type": "shell",
+    "inline": ["echo test"]
+  }
+ ],
+ "post-processors": ["vagrant"]
+}
