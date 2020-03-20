@@ -79,3 +79,9 @@ vagrant cloud auth login
 
 If you mean support for bhyve or vmm, it's a work in progress. You can
 find custom providers on github.
+
+## I don't want to build, just want to use it...
+
+You can add one image directly in your `Vagrantfile` or take a look on
+my [profile](https://app.vagrantup.com/niamtokik).
+
