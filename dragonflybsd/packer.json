@@ -21,6 +21,9 @@
     "boot_command": [
     ]}
   ],
-  "provisioners": [ ],
+  "provisioners": [  
+     { "type": "shell",
+       "inline": ["uname -a"] }
+  ],
   "post-processors": ["vagrant"]
 }

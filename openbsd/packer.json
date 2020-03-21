@@ -12,6 +12,7 @@
     "user_password": "vagrant"
   },
   "builders": [{
+    "headless": true,
     "type": "virtualbox-iso",
     "guest_os_type": "{{user `os_type`}}",
     "iso_url": "https://{{user `repository`}}/pub/OpenBSD/{{user `release`}}/{{user `arch`}}/{{user `installer`}}",
@@ -56,7 +57,7 @@
  }],
  "provisioners": [
    { "type": "shell",
-     "inline": ["echo test"]
+     "inline": ["uname -a"]
    }
  ],
  "post-processors": ["vagrant"]

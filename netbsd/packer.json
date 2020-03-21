@@ -10,6 +10,7 @@
     "user_password": "vagrant"
   },
   "builders": [{
+    "headless": true,
     "type": "virtualbox-iso",
     "guest_os_type": "{{user `os_type`}}",
     "iso_url": "http://{{user `repository`}}/pub/NetBSD/NetBSD-{{user `release`}}/{{user `arch`}}/installation/cdrom/boot.iso",
@@ -58,6 +59,9 @@
       "<enter><wait5>",
       "d<enter><wait5>"]}
   ],
-  "provisioners": [ ],
+  "provisioners": [
+     { "type": "shell",
+       "inline": ["uname -a"] }
+  ],
   "post-processors": ["vagrant"]
 }
