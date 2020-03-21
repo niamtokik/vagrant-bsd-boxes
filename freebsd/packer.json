@@ -70,9 +70,8 @@
   ],
   "provisioners": [  
      { "type": "shell",
-       "inline": ["uname -a",
-                  "freebsd-update fetch 2>&1 >/dev/null",
-                  "freebsd-update install"] }
+       "inline": ["uname -a"] 
+     }
   ],
   "post-processors": ["vagrant"]
 }
