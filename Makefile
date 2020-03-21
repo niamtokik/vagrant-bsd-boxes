@@ -4,4 +4,4 @@
 
 .PHONY += all
 all:
-
+	make -C openbsd/Makefile openbsd
