@@ -63,7 +63,15 @@
       "yes<enter><wait>",
       "no<enter><wait>",
       "<enter><wait>",
-      "<enter><wait>",
+      "Y<enter><wait>",
+      "freebsd-update fetch<enter><wait5m>",
+      "q<enter><wait>",
+      "freebsd-update install<enter><wait5m>",
+      "export ASSUME_ALWAYS_YES=yes<enter><wait>",
+      "pkg<enter><wait30s>",
+      "pkg update<enter><wait1m>",
+      "pkg install -y sudo<enter><wait30s>",
+      "exit<enter><wait>",
       "<enter><wait>",
       "<wait1m>"
     ]}
