@@ -30,9 +30,9 @@
 	"<enter><wait5s>",
 	"<enter><wait5s>",
 	"<up><wait5s><enter><wait5s>",
-	"<enter><wait5s>,
-	"<enter><wait30s>,
-	"<enter><wait5m>,
+	"<enter><wait5s>",
+	"<enter><wait30s>",
+	"<enter><wait5m>",
 	"<down><wait><enter><wait>",
 	"<enter><wait>",
 
