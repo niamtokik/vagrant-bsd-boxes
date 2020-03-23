@@ -1,18 +1,19 @@
 { 
     "variables": {
         "os_type": "FreeBSD_64",
-        "repository": "ci-01.nyi.hardenedbsd.org",
+        "repository": "installer.hardenedbsd.org",
         "release": "12-stable",
         "arch": "amd64",
-        "checksum": "0f630b5a8c2f38ea9171f09a75a25b839875285907fcc8289ffafa26f8a97653ddcb271ed4f519a4b37ea61383658fd2e175178b718286390a5b82f37ba91357",
+        "checksum": "849a184e5c50602e3e344d61fdbc04704807845a73e13ba52910e0b17d9d7106c5b2827064841e03145765b9f6a9c5a05f2e276173e6f1edb5a767bc16393bf3",
         "checksum_type": "sha512",
         "root_password": "vagrant",
         "user_password": "vagrant"
     },
     "builders": [{
+        "headless": true,
         "type": "virtualbox-iso",
         "guest_os_type": "{{user `os_type`}}",
-        "iso_url": "https://{{user `repository`}}/pub/hardenedbsd/{{user `release`}}/{{user `arch`}}/{{user `arch`}}/BUILD-LATEST/bootonly.iso",
+        "iso_url": "https://{{user `repository`}}/pub/hardenedbsd/{{user `release`}}/{{user `arch`}}/{{user `arch`}}/BUILD-LATEST/disc1.iso",
         "iso_checksum": "{{user `checksum`}}",
         "iso_checksum_type": "{{user `checksum_type`}}",
         "ssh_username": "vagrant",
