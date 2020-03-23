@@ -141,6 +141,10 @@ my [profile](https://app.vagrantup.com/niamtokik).
 
 Yes (manually)... And no (automatically) at this time. 
 
+## What OS are you using?
+
+Void-Linux 
+
 ## How to integrate in CI/CD?
 
 NOTE: Work in progress
