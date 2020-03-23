@@ -57,6 +57,7 @@
 	"<down><wait>",
 	"<down><wait>",
 	"<down><wait>",
+	"<down><wait>",
 	"wheel<down><wait>",
 	"<left><wait><enter><wait5s>",
 	"<enter><wait5s>",
