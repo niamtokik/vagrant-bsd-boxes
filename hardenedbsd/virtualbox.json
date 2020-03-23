@@ -10,10 +10,9 @@
         "user_password": "vagrant"
     },
     "builders": [{
-        "headless": true,
         "type": "virtualbox-iso",
         "guest_os_type": "{{user `os_type`}}",
-        "iso_url": "https://{{user `repository`}}/pub/hardenedbsd/{{user `release`}}/{{user `arch`}}/{{user `arch`}}/BUILD-LATEST/disc1.iso",
+        "iso_url": "http://{{user `repository`}}/pub/hardenedbsd/{{user `release`}}/{{user `arch`}}/{{user `arch`}}/BUILD-LATEST/disc1.iso",
         "iso_checksum": "{{user `checksum`}}",
         "iso_checksum_type": "{{user `checksum_type`}}",
         "ssh_username": "vagrant",
