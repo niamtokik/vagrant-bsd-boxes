@@ -11,6 +11,7 @@
     "user_password": "vagrant"
   },
   "builders": [{
+    "headless": true,
     "type": "virtualbox-iso",
     "guest_os_type": "{{user `os_type`}}",
     "iso_url": "https://{{user `repository`}}/pub/FreeBSD/releases/ISO-IMAGES/{{user `release`}}/FreeBSD-{{user `release`}}-RELEASE-{{user `arch`}}-bootonly.iso",

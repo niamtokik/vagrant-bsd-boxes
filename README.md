@@ -75,6 +75,36 @@ Only amd64 (or x86_64) are supported at the moment.
 
 # FAQ
 
+## Why this project?
+
+ * check different kind of BSD installer
+   * simulate users behaviours
+   * ensure current version is working
+   * ensure installer is working
+   * ensure virtual machine is booting
+   * ensure kernel is working (with local test)
+   * ensure userland is working (with local test)
+   
+ * offer standard and up to date virtual machine
+   * security patch by default
+   * with minimal configuration
+   * base image for deploying other services
+   
+ * offer a quick way to deploy BSD systems
+   * packer builder
+   * vagrant image compatible
+   * multi-support (virtualbox, qemu, libvirt, hyper-v...)
+   
+ * find better alternative to install BSD systems
+   * optimizing the installation process
+   * with cloud computing, we need a better wy to install and deploy
+     BSD systems
+
+ * for my own projects
+   * articles
+   * books
+   * training
+
 ## What is the requirement?
 
  * operating system supporting one of the previous listed providers:
