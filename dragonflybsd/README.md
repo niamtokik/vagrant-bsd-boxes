@@ -1,6 +1,8 @@
 # DragonFlyBSD
 
- * http://mirror-master.dragonflybsd.org/iso-images/
+ * full: https://app.vagrantup.com/niamtokik/boxes/dragonflybsd
+ * full+hammer1: https://app.vagrantup.com/niamtokik/boxes/dragonflybsd-hammer1
+ * full+hammer2: https://app.vagrantup.com/niamtokik/boxes/dragonflybsd-hammer2
 
 ## Freeze during VirtualBox install
 
@@ -32,3 +34,7 @@ sed -i "s/^PasswordAuthentication/# &/" /etc/ssh/sshd_config.bck \
 	> /etc/ssh/sshd_config
 service sshd restart
 ```
+
+## Resources
+
+ * http://mirror-master.dragonflybsd.org/iso-images/

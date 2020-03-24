@@ -28,51 +28,6 @@ gmake openbsd
 
 Only amd64 (or x86_64) are supported at the moment.
 
-## [OpenBSD](https://www.openbsd.org/)
-
- * full install
-   * https://app.vagrantup.com/niamtokik/boxes/openbsd-current
-   * https://app.vagrantup.com/niamtokik/boxes/openbsd-6.6
-   
- * fde + full install
-   * wip
-
-## [FreeBSD](https://www.freebsd.org/)
-
- * full install (ufs)
- * fde + full install (ufs)
-
-## [NetBSD](https://www.netbsd.org/)
-
- * full install
-   * https://app.vagrantup.com/niamtokik/boxes/netbsd-9
- * no x11 install
-   * https://app.vagrantup.com/niamtokik/boxes/netbsd-9-nox11
- * minimal install
-   * https://app.vagrantup.com/niamtokik/boxes/netbsd-9-minimal
-
-## [DragonFlyBSD](https://www.dragonflybsd.org)
-
- * full install
-   * https://app.vagrantup.com/niamtokik/boxes/dragonflybsd
-
-## [HardenedBSD](https://hardenedbsd.org/)
-
- * full install
-   * https://app.vagrantup.com/niamtokik/boxes/hardenedbsd-12
- * fde install
-   * wip
-
-## [OPNSense](https://opnsense.org/)
-
- * full install
-   * wip
-
-## [BSDRP](https://bsdrp.net/)
-
- * full install
-   * wip
-
 # FAQ
 
 ## Why this project?
@@ -96,6 +51,7 @@ Only amd64 (or x86_64) are supported at the moment.
    * multi-support (virtualbox, qemu, libvirt, hyper-v...)
    
  * find better alternative to install BSD systems
+   * new installer, faster, easier and better
    * optimizing the installation process
    * with cloud computing, we need a better wy to install and deploy
      BSD systems
