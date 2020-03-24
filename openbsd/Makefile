@@ -3,7 +3,8 @@
 ######################################################################
 
 .PHONY += all
-all: openbsd-current openbsd-6.6
+all: 
+	packer build virtualbox.json
 
 .PHONY += openbsd-current
 openbsd-current:
