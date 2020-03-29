@@ -59,17 +59,17 @@
 			"<enter><wait5s>",
 
 			include(netbsd/root-password.m4)
-			include(netbsd/root-shell.m4)
+			ifelse(ROOT_SHELL, sh, [[-include(netbsd/root-shell.m4)-]])
 			include(netbsd/add-user.m4)
-			include(netbsd/timezone.m4)
-			include(netbsd/enable-cgd.m4)
-			include(netbsd/enable-lvm.m4)
-			include(netbsd/enable-mdnsd.m4)
-			include(netbsd/enable-ntpd.m4)
-			include(netbsd/enable-ntpdate.m4)
-			include(netbsd/enable-raidframe.m4)
-			include(netbsd/enable-sshd.m4)
-			include(netbsd/enable-xdm.m4)
+			ifelse(TIMEZONE, UTC, [[-include(netbsd/timezone.m4)-]])
+			ifelse(CGD, YES, [[-include(netbsd/enable-cgd.m4)-]])
+			ifelse(LVM, YES, [[-include(netbsd/enable-lvm.m4)-]])
+			ifelse(MDSND, YES, [[-include(netbsd/enable-mdnsd.m4)-]])
+			ifelse(NTPD, YES, [[-include(netbsd/enable-ntpd.m4)-]])
+			ifelse(NTPDATE, YES, [[-include(netbsd/enable-ntpdate.m4)-]])
+			ifelse(RAIDFRAME, YES, [[-include(netbsd/enable-raidframe.m4)-]])
+			ifelse(SSHD, YES, [[-include(netbsd/enable-sshd.m4)-]])
+			ifelse(XDM, YES, [[-include(netbsd/enable-xdm.m4)-]])
 
 			"x<enter><wait5s>",
 			"<enter><wait5s>",

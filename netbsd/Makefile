@@ -1,8 +1,7 @@
 ######################################################################
 # GNU Makefile 
 ######################################################################
-PROVIDERS ?= qemu.json \
-	virtualbox.json
+PROVIDERS ?= qemu.json virtualbox.json
 	
 M4_OPTS ?=
 M4_INCLUDE = -I../template/ -I../template/netbsd
@@ -10,7 +9,7 @@ M4_OPTS = $(M4_INCLUDE) $(M4_ARGS)
 
 .PHONY += help
 help:
-	@echo "make [all|help|clean|PROVIDERS]"
+	@echo "make [all|help|clean|clean-packer|PROVIDERS]"
 
 .PHONY += all
 all: qemu virtualbox
@@ -18,6 +17,10 @@ all: qemu virtualbox
 .PHONY += clean
 clean:
 	-rm *.json
+
+.PHONY += packer_cache
+clean-packer:
+	-rm -rf packer_cache
 
 .PHONY += qemu
 qemu: qemu.json
