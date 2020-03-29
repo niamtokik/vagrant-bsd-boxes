@@ -12,6 +12,10 @@ M4_OPTS = $(M4_INCLUDE)
 .PHONY += all
 all: qemu virtualbox hyperv libvirt
 
+.PHONY += clean
+clean:
+	-rm *.json
+
 .PHONY += qemu
 qemu: qemu.json
 	packer build $?
@@ -21,4 +25,4 @@ virtualbox: virtualbox.json
 	packer build $?
 
 $(PROVIDERS):
-	m4 $(M4_OPTS) -o $@ ../template/_default.m4 $@.m4
+	m4 $(M4_OPTS) ../template/_default.m4 $@.m4 > $@
