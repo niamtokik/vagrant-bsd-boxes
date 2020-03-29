@@ -75,6 +75,7 @@ This Makefile was tested with:
 ## Resources
 
  * https://www.netbsd.org
+ * http://bxr.su/NetBSD/usr.sbin/sysinst/
  * https://man.openbsd.org/m4
  * https://www.mkssoftware.com/docs/man1/m4.1.asp
  * https://mbreen.com/m4.html
