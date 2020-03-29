@@ -1,0 +1,5 @@
+"d<enter><wait5s>",
+"a<enter><wait5s>",
+"{{user `root_password`}}<enter><wait5s>",
+"{{user `root_password`}}<enter><wait5s>",
+"{{user `root_password`}}<enter><wait5s>",
