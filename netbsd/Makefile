@@ -2,9 +2,7 @@
 # GNU Makefile 
 ######################################################################
 PROVIDERS ?= qemu.json \
-	virtualbox.json \
-	hyperv.json \
-	libvirt.json
+	virtualbox.json
 	
 M4_INCLUDE = -I../template/ -I../template/netbsd
 M4_OPTS = $(M4_INCLUDE)
@@ -14,7 +12,7 @@ help:
 	@echo "make [all|help|clean|PROVIDERS]"
 
 .PHONY += all
-all: qemu virtualbox hyperv libvirt
+all: qemu virtualbox
 
 .PHONY += clean
 clean:
