@@ -9,6 +9,10 @@ PROVIDERS ?= qemu.json \
 M4_INCLUDE = -I../template/ -I../template/netbsd
 M4_OPTS = $(M4_INCLUDE)
 
+.PHONY += help
+help:
+	@echo "make [all|help|clean|PROVIDERS]"
+
 .PHONY += all
 all: qemu virtualbox hyperv libvirt
 
