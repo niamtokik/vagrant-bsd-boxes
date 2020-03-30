@@ -1,0 +1,9 @@
+define([[-netbsd_add_user-]],
+g<enter><wait5s>",
+"o<enter><wait5s>",
+"$1<enter><wait5s>",
+"a<enter><wait5s>",
+"a<enter><wait5s>",
+"$2<enter><wait5s>",
+"$2<enter><wait5s>",
+)
