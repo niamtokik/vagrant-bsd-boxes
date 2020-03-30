@@ -72,6 +72,46 @@ This Makefile was tested with:
  * GNU Make
  * OpenBSD make
 
+### How it works?
+
+Packer supports Go templating systems. Unfortunately, this feature is
+limited and should be used to set only simple variable. When it comes
+to create a more complex template, we need to use a macro or
+templating language. It is why m4 was taken. m4 is available on all
+BSD systems and on practically all Linux distribution by default.
+
+The idea is to create templates for each group of action, stored in m4
+template library. This group of action can be added or removed from
+another m4 template (JSON file). This one will give the full template.
+
+ 1. Study the different pattern from an installer
+ 
+ 2. Group them by action (e.g. install from http)
+ 
+ 3. Create a JSON template for a builders (e.g. qemu) or a systems
+    (e.g. netbsd).
+    
+ 4. Add a group of actions only activated based on flags and
+    variables.
+    
+ 5. Use the final JSON with packer
+ 
+Make in this case is only an abstraction, to help people to build
+easily the desired box.
+
+### My setup took so much time!
+
+Unfortunately, Packer is and remains a hack. Our installers were not
+designed to talk to machine, but to talk to human. We don't have any
+help from them, and must trust the installer and its output. This is
+why we have lot of `<wait>` action in the different template, to
+ensure everything will be okay, even for a lower system. These
+`<wait>` action will be defined as variable soon.
+
+This is why we need a way to rethink the installation process today
+and find a way to interact with the installer or, like OpenBSD, create
+an easy way to install a default system.
+
 ## Resources
 
  * https://www.netbsd.org
