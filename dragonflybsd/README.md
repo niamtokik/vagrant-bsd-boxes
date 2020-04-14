@@ -38,3 +38,4 @@ service sshd restart
 ## Resources
 
  * http://mirror-master.dragonflybsd.org/iso-images/
+ * http://bxr.su/DragonFly/usr.sbin/installer/

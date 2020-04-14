@@ -1,6 +1,0 @@
-"a<enter><wait5s>",
-"a<enter><wait5s>",
-"<enter><wait5s>",
-"a<enter><wait5s>",
-"{{user `domain`}}<enter><wait5s>",
-"a<enter><wait5s>",

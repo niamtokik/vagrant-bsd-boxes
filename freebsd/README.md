@@ -13,4 +13,4 @@ not for the installation but for the host...
 
  * https://www.freebsd.org/
  * https://www.freebsd.org/doc/handbook/mirrors-ftp.html
-
+ * http://bxr.su/FreeBSD/usr.sbin/bsdinstall/
