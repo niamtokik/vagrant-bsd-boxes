@@ -1,4 +1,6 @@
 dnl -- install in english
+dnl -- select the installation process language
+dnl -- does not change anything
 define(1-install-in-english, "a<enter><wait5>")
 define(1-install-in-deutsch, "b<enter><wait5>")
 define(1-install-in-catalan, "c<enter><wait5>")
@@ -6,6 +8,7 @@ define(1-install-in-french, "d<enter><wait5>")
 define(1-install-in-polish, "e<enter><wait5>") 
 
 dnl -- keyboard menu
+dnl -- select the keyboard layout for the installation
 define(2-select-keyboard-us-english, "b<enter><wait5>")
 define(2-select-keyboard-uk-english, "c<enter><wait5>")
 define(2-select-keyboard-dutch, "g<enter><wait5>")
@@ -15,20 +18,30 @@ define(2-select-keyboard-greek, "k<enter><wait5>")
 define(2-select-keyboard-italian, "m<enter><wait5>")
 define(2-select-keyboard-japanese, "n<enter><wait5>")
 define(2-select-keyboard-russian, "r<enter><wait5>")
+define(2-select-keyboard-turkish, "w<enter><wait5>")
+define(2-select-keyboard-ukrainian, "y<enter><wait5>")
+define(2-select-keyboard-us-colemak, "z<enter><wait5>")
 define(2-select-keyboard-us-dvorak, "A<enter><wait5>")
 
 dnl -- install menu
+dnl -- main installation menu
 define(3-netbsd-install-hard-disk, "a<enter><wait5>")
 define(3-netbsd-upgrade-hard-disk, "b<enter><wait5>")
 define(3-netbsd-reinstall-sets, "c<enter><wait5>")
 define(3-netbsd-reboot, "d<enter><wait5>")
 define(3-netbsd-utility, "e<enter><wait5>")
+define(3-netbsd-config-menu, "f<enter><wait5>")
+define(3-netbsd-config-exit, "x<enter><wait5>")
 
 dnl -- install to hard disk validation
+dnl -- by default its not
 define(4-install-hard-disk-validation-yes, "b<enter><wait5>")
 define(4-install-hard-disk-validation-no, "a<enter><wait5>")
 
 dnl -- available disk
+dnl -- the list of the different available hard drive
+dnl -- in this case we are supporting only one.
+dnl -- a dynamic macro should be created
 define(5-select-disk-first, "a<enter><wait5>")
 define(5-select-disk-extended-partition, "b<enter><wait5>")
 define(5-select-disk-exit, "x<enter><wait5>")
@@ -191,4 +204,37 @@ define(27-selected-disk-scheme-gpt, "a<enter><wait5>")
 define(27-selected-disk-scheme-mbr, "b<enter><wait5>")
 define(27-selected-disk-scheme-disklabel, "c<enter><wait5>")
 
-dnl -- cryptographic volume
+dnl -- TOTEST: cryptographic volume
+dnl -- this part is a bit complicated
+define(X2-crypto-volume-base-device, "a<enter><wait5>")
+define(X2-crypto-volume-encryption, "b<enter><wait5>")
+define(X2-1-crypto-volume-encryption-aes-xts, "a<enter><wait5>")
+define(X2-1-crypto-volume-encryption-aes-cbc, "b<enter><wait5>")
+define(X2-1-crypto-volume-encryption-aes-3des, "c<enter><wait5>")
+define(X2-1-crypto-volume-encryption-aes-blowfish, "d<enter><wait5>")
+define(X2-crypto-volume-encryption-key-size, "c<enter><wait5>")
+define(X2-crypto-volume-encryption-iv-algo, "d<enter><wait5>")
+define(X2-crypto-volume-encryption-key-generation, "e<enter><wait5>")
+define(X2-crypto-volume-encryption-verification-method, "f<enter><wait5>")
+define(X2-crypto-volume-encryption-remove, "g<enter><wait5>")
+define(X2-crypto-volume-encryption-done, "x<enter><wait5>")
+
+dnl -- TODO: virtual disk image
+dnl -- need to be created
+
+dnl -- TODO: volume group
+dnl -- disks must be formatted with PV first
+
+dnl -- TODO: software raid
+dnl -- add multiple disk in raid
+
+dnl -- TOTEST: utility menu
+dnl -- this menu is used after an installation
+define(X1-utility-run-sh, "a<enter><wait5>")
+define(X1-utility-set-timezone, "b<enter><wait5>")
+define(X1-utility-configure-network, "c<enter><wait5>")
+define(X1-utility-partition-disk, "d<enter><wait5>")
+define(X1-utility-logging-functions, "e<enter><wait5>")
+define(X1-utility-color-scheme, "f<enter><wait5>")
+define(X1-utility-halt-system, "g<enter><wait5>")
+define(X1-utility-exit, "x<enter><wait5>")
